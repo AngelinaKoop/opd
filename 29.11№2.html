@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Работает только черезт гугл</title>
+<script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=5miUBUjJUd05qasZAn7rNeCZBFlrWDIx58hvRQ6ejN1uxP8j-2ta8GzSsDioE6XtEYL2klYHGS8BknNZAp4zjnAowJf_rmgVX8pbJ36paagIYR3qrdgUpmi3AhzbRwbadyw3KtnYMgEFlv122RwkQ3N2qgFwSO5h-vzyBWWbsE3IRfc2Iz1Z1CpELphA1bBdET6X761vnHG8QKJ-6zq7tSby69--t1vOHxeOOMmmMEGxGbYXNpHjXsv_JuV0Je_elDJRLfeVoj0X3r-6DuFDcks5gJGWTiM7ot_3LyiS8yCD87DVZTbUE8Iom3ikAXvu0flaEEjrJyLVNsIDfQ3fEkeV85Mw4P-24CmSTnZ5yJ77GyQGEtjfYi1LuWWkTvvhqbRcZkqnCIMH2uZG_pfJCybMdrOsHNaeH85W7Ybe6-RG5L2Hfoo2tfYtT9oUMXDeHUV2xFLMLFL0M03X2o9pEKf8h5K4kGSBzXJfxMVTYztYvgdameyIzaMcMncYqzUsXewqOKEsBRuGqyka-wRCWjSO5tNb_f1yUoi5eYZ3De1eqhDBo1cYjF8fU5SmzDcv7RYbpm_UzCQSv3pdbMQugQ7aAJy8-3HICgVmsw0lNLxNUcsX-TCYtQOdvnc6Zptq" charset="UTF-8"></script></head>
+<body>
+    <button id="btn1">ClickMe</button>
+    <button id="btn2">Show</button>
+    <textarea id="txt1" placeholder="enter your data"></textarea>
+    <script>
+        let btn1 = document.getElementById('btn1')
+        let btn2 = document.getElementById('btn2')
+        let txt1 = document.getElementById('txt1')
+        let MainArr = []
+        let PArr = []
+        let SortHappened
+        btn1.onclick = function(){
+            MainArr.push(txt1.value)
+            console.log(txt1.value)
+            txt1.value = ""
+            AddPArr(PArr)
+        }
+        btn2.onclick = function(){
+            BubbleSort(MainArr)
+            console.log(MainArr)
+            console.log(PArr)
+        }
+        function AddPArr(PArr){
+            for(i=0; i<MainArr.length; i++){
+                if (txt1.value==MainArr[i]){
+                    for(j=0; j<PArr.length; j++){
+                        if(txt1.value==PArr[j]){
+                            PArr[j]++
+                        }
+                        else{
+                            PArr.push()
+                        }
+                    }
+                }
+            }   
+        }
+        function BubbleSort(MainArr){
+            for(i=MainArr.length; i>0;i--){
+               for(j=1; j<MainArr.length;j++){
+                   if(MainArr[j]<MainArr[j-1]){
+                       let swapper = MainArr[j]
+                       MainArr[j] = MainArr[j-1]
+                       MainArr[j-1] = swapper
+                       SortHappened = true
+                   }
+                   if (SortHappened!=true){
+                    
+                   }
+               }
+            }  
+        }
+    </script>
+</body>
+</html>
